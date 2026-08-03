@@ -23,5 +23,5 @@ export const BUSINESS_HOURS = [
 
 // EmailJS configuration
 export const EMAILJS_SERVICE_ID = 'service_zcyqnei';
-export const EMAILJS_TEMPLATE_ID = 'template_i2se0dm';
+export const EMAILJS_TEMPLATE_ID = 'template_okmbofk';
 export const EMAILJS_PUBLIC_KEY = 'FNwwRDap1HiXaNq3L';
