@@ -90,7 +90,7 @@ export const SERVICE_CATEGORIES = [
     icon: Heart,
     items: [
       { name: 'Basic Facial', price: '$50.00' },
-      { name: 'Hydrating Facial', price: '$70.00' },
+      { name: 'Hydrating Facial', price: '$75.00' },
       { name: 'Deep Cleansing Facial', price: '$90.00' },
       { name: 'Brightening Facial', price: '$80.00' },
       { name: 'Hydrafacial', price: '$150.00' },
