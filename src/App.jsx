@@ -15,7 +15,7 @@ export default function App() {
     <div className="min-h-screen bg-bg text-white">
       <TopBar />
       <Navbar />
-      <main>
+      <main className="pt-20">
         <Hero />
         <About />
         <Services />

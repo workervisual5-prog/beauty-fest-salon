@@ -24,11 +24,7 @@ export const SERVICE_CATEGORIES = [
       { name: 'Henna Application', price: '$40.00+' },
       { name: 'Up-Do', price: '$65.00+' },
       { name: 'Wash, Cut & Style', price: '$65.00+' },
-<<<<<<< HEAD
-      { name: 'Curls', price: '$50.00+' },
-=======
-      { name: 'Curls', price: '$40.00+' },
->>>>>>> e915ad1eb6d56308c1073bc4155e0f7b8e6aa7f8
+{ name: 'Curls', price: '$50.00+' },
       { name: 'Flat Iron Straightening', price: '$30.00+' },
       { name: 'Ombre', price: '$200.00+' },
       { name: 'Balayage', price: '$200.00+' },
@@ -94,13 +90,8 @@ export const SERVICE_CATEGORIES = [
     icon: Heart,
     items: [
       { name: 'Basic Facial', price: '$50.00' },
-<<<<<<< HEAD
-      { name: 'Hydrating Facial', price: '$75.00' },
+      { name: 'Hydrating Facial', price: '$70.00' },
       { name: 'Deep Cleansing Facial', price: '$90.00' },
-=======
-      { name: 'Hydrating Facial', price: '$150.00' },
-      { name: 'Deep Cleansing Facial', price: '$80.00' },
->>>>>>> e915ad1eb6d56308c1073bc4155e0f7b8e6aa7f8
       { name: 'Brightening Facial', price: '$80.00' },
       { name: 'Hydrafacial', price: '$150.00' },
       { name: 'Oxygeneo Facial', price: '$120.00' },
@@ -114,15 +105,9 @@ export const SERVICE_CATEGORIES = [
     icon: Palette,
     items: [
       { name: 'Party Make-Up', price: '$120.00+' },
-<<<<<<< HEAD
       { name: 'Bridal Package', price: '$350.00+' },
       { name: 'Party Hairstyle', price: '$85.00+' },
       { name: 'Party Hairstyle & Make-Up', price: '$200.00+' },
-=======
-      { name: 'Bridal Package', price: '$300.00+' },
-      { name: 'Party Hairstyle', price: '$85.00+' },
-      { name: 'Party Hairstyle & Make-Up', price: '$180.00+' },
->>>>>>> e915ad1eb6d56308c1073bc4155e0f7b8e6aa7f8
       { name: 'Eyelashes', price: '$15.00+' },
       { name: 'Eye Makeup', price: '$35.00+' },
     ],

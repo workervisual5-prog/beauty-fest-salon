@@ -19,7 +19,7 @@ export default function Navbar() {
   const handleNavClick = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/95 backdrop-blur border-b border-white/5">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-1.5">
         <a href="#top" className="flex items-center shrink-0">
           <img src={logoBanner} alt="Beauty Fest Salon & Spa" className="h-12 sm:h-14 w-auto object-contain" />
