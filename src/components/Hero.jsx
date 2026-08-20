@@ -12,7 +12,7 @@ export default function Hero() {
           className="h-40 sm:h-44 md:h-52 w-auto object-contain mb-8"
         />
 
-        <h1 className="font-script text-6xl sm:text-7xl md:text-8xl text-white leading-none">
+        <h1 className="font-script text-6xl sm:text-7xl md:text-8xl text-gray-900 leading-none">
           Beauty Fest
         </h1>
 
@@ -22,7 +22,7 @@ export default function Hero() {
 
         <div className="underline-accent mx-auto my-5" />
 
-        <p className="italic text-gray-400 text-lg sm:text-xl">A breath of fresh 'hair'</p>
+        <p className="italic text-gray-600 text-lg sm:text-xl">A breath of fresh 'hair'</p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a
@@ -33,7 +33,7 @@ export default function Hero() {
           </a>
           <a
             href={PHONE_TEL}
-            className="border border-white/30 text-white font-semibold px-8 py-4 rounded hover:border-teal-accent hover:text-teal-accent transition-colors uppercase tracking-wide text-sm inline-flex items-center justify-center gap-2"
+            className="border border-gray-300 text-gray-900 font-semibold px-8 py-4 rounded hover:border-teal-accent hover:text-teal-accent transition-colors uppercase tracking-wide text-sm inline-flex items-center justify-center gap-2"
           >
             <Phone size={16} />
             Call Now
