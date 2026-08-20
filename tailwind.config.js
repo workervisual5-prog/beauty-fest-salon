@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-  bg: {
-    DEFAULT: '#FFFFFF',
-    panel: '#FAFAF8',
-    card: '#FFFFFF',
-  },
-  teal: {
-    accent: '#5EEAD4',
-  },
-},
+        bg: {
+          DEFAULT: '#0a0a0a',
+          panel: '#111111',
+          card: '#161616',
+        },
+        teal: {
+          accent: '#5EEAD4',
+        },
+      },
       fontFamily: {
         script: ['"Alex Brush"', 'cursive'],
         display: ['"Alfa Slab One"', 'serif'],
