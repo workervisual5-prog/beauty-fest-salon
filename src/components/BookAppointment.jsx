@@ -56,7 +56,7 @@ export default function BookAppointment() {
 
   return (
     <section id="book" className="px-4 sm:px-6 lg:px-8 py-20 bg-bg-panel/40">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center reveal">
         <p className="text-gray-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Reserve Your Spot
         </p>
@@ -171,7 +171,7 @@ export default function BookAppointment() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-teal-accent text-black font-semibold px-6 py-4 rounded hover:bg-teal-300 transition-colors uppercase tracking-wide text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+            className="mt-6 w-full inline-flex items-center justify-center gap-2 btn-primary font-semibold px-6 py-4 rounded uppercase tracking-wide text-sm disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === 'loading' ? (
               <>
@@ -187,7 +187,7 @@ export default function BookAppointment() {
           </button>
 
           {status === 'success' && (
-            <p className="mt-4 flex items-center gap-2 text-teal-accent text-sm">
+            <p className="mt-4 flex items-center gap-2 text-accent text-sm">
               <CheckCircle2 size={16} />
               Thanks! Your request has been sent. We'll confirm your appointment by phone shortly.
             </p>
@@ -207,28 +207,28 @@ export default function BookAppointment() {
         <div className="flex flex-col gap-5">
           <a
             href={PHONE_TEL}
-            className="bg-bg-card border border-white/10 rounded-lg p-6 hover:border-teal-accent/40 transition-colors"
+            className="card-lift bg-bg-card border border-white/10 rounded-lg p-6 hover:border-accent/40"
           >
-            <div className="h-11 w-11 rounded-full bg-teal-accent/10 flex items-center justify-center mb-4">
-              <Phone size={20} className="text-teal-accent" />
+            <div className="h-11 w-11 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+              <Phone size={20} className="text-accent" />
             </div>
             <h3 className="text-white font-semibold mb-1">Call to Book</h3>
             <p className="text-gray-400 text-sm mb-2">Speak directly with our team</p>
-            <p className="text-teal-accent font-medium">{PHONE_DISPLAY}</p>
+            <p className="text-accent font-medium">{PHONE_DISPLAY}</p>
           </a>
 
           <a
             href={INSTAGRAM_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-bg-card border border-white/10 rounded-lg p-6 hover:border-teal-accent/40 transition-colors"
+            className="card-lift bg-bg-card border border-white/10 rounded-lg p-6 hover:border-accent/40"
           >
-            <div className="h-11 w-11 rounded-full bg-teal-accent/10 flex items-center justify-center mb-4">
-              <Instagram size={20} className="text-teal-accent" />
+            <div className="h-11 w-11 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+              <Instagram size={20} className="text-accent" />
             </div>
             <h3 className="text-white font-semibold mb-1">DM on Instagram</h3>
             <p className="text-gray-400 text-sm mb-2">Message us for appointments</p>
-            <p className="text-teal-accent font-medium">{INSTAGRAM_HANDLE}</p>
+            <p className="text-accent font-medium">{INSTAGRAM_HANDLE}</p>
           </a>
         </div>
       </div>
@@ -240,7 +240,7 @@ function Field({ label, required, children }) {
   return (
     <label className="block">
       <span className="block text-gray-400 text-xs font-semibold tracking-wide uppercase mb-2">
-        {label} {required && <span className="text-teal-accent">*</span>}
+        {label} {required && <span className="text-accent">*</span>}
       </span>
       {children}
     </label>

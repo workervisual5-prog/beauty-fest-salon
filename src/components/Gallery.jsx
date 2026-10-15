@@ -50,7 +50,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center reveal">
         <p className="text-gray-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Our Work
         </p>
@@ -65,16 +65,17 @@ export default function Gallery() {
             <button
               key={img.src}
               onClick={() => openAt(index)}
-              className="group relative aspect-square overflow-hidden rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-accent"
+              style={{ '--delay': `${(index % 4) * 90}ms` }}
+              className="reveal group relative aspect-square overflow-hidden rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-accent"
               aria-label={`Open image ${index + 1} of ${GALLERY_IMAGES.length}`}
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent-deep/0 to-transparent group-hover:from-accent-deep/40 transition-colors duration-500" />
             </button>
           ))}
         </div>
@@ -89,7 +90,7 @@ export default function Gallery() {
           <button
             onClick={close}
             aria-label="Close"
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-teal-accent transition-colors p-2 z-10"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-accent transition-colors p-2 z-10"
           >
             <X size={32} />
           </button>
@@ -97,14 +98,14 @@ export default function Gallery() {
           <button
             onClick={showPrev}
             aria-label="Previous image"
-            className="hidden sm:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-teal-accent transition-colors p-2 z-10"
+            className="hidden sm:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent transition-colors p-2 z-10"
           >
             <ChevronLeft size={40} />
           </button>
           <button
             onClick={showNext}
             aria-label="Next image"
-            className="hidden sm:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-teal-accent transition-colors p-2 z-10"
+            className="hidden sm:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent transition-colors p-2 z-10"
           >
             <ChevronRight size={40} />
           </button>
@@ -119,7 +120,7 @@ export default function Gallery() {
             <button
               onClick={showPrev}
               aria-label="Previous image"
-              className="sm:hidden text-white/70 hover:text-teal-accent transition-colors p-2"
+              className="sm:hidden text-white/70 hover:text-accent transition-colors p-2"
             >
               <ChevronLeft size={28} />
             </button>
@@ -129,7 +130,7 @@ export default function Gallery() {
             <button
               onClick={showNext}
               aria-label="Next image"
-              className="sm:hidden text-white/70 hover:text-teal-accent transition-colors p-2"
+              className="sm:hidden text-white/70 hover:text-accent transition-colors p-2"
             >
               <ChevronRight size={28} />
             </button>

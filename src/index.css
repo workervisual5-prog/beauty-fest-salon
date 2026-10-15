@@ -9,13 +9,13 @@ html {
 
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  background-color: #ffffff;
+  background-color: #070c0e;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #5eead4;
-  color: #171717;
+  background-color: #7cd4de;
+  color: #06181c;
 }
 
 .section-label {
@@ -23,21 +23,118 @@ body {
 }
 
 .underline-accent {
-  width: 56px;
+  width: 64px;
   height: 3px;
-  background-color: #5eead4;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #2f93a6, #7cd4de, #ddf5f8);
+}
+
+/* Shimmering aqua gradient text, matching the logo */
+.text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    #7cd4de 0%,
+    #a9e7ee 20%,
+    #ddf5f8 40%,
+    #ffffff 50%,
+    #ddf5f8 60%,
+    #a9e7ee 80%,
+    #7cd4de 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Logo PNGs have a black background; "lighten" lets it melt into the dark page */
+.logo-blend {
+  mix-blend-mode: lighten;
+}
+
+/* Primary button: gradient fill with a light sweep on hover */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(110deg, #7cd4de, #ddf5f8);
+  color: #06181c;
+  box-shadow: 0 10px 30px -10px rgba(124, 212, 222, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(124, 212, 222, 0.75);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(120%);
+}
+
+/* Nav links: underline that grows from the centre */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7cd4de, #ddf5f8);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Cards lift slightly on hover */
+.card-lift {
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px rgba(124, 212, 222, 0.35);
+}
+
+/* Scroll reveal: elements fade up as they enter the viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 .input-field {
   width: 100%;
   background-color: #ffffff;
-  border: 1px solid #d9e8e6;
+  border: 1px solid #d3e9ec;
   border-radius: 0.375rem;
   padding: 0.7rem 0.9rem;
   color: #171717;
   font-size: 0.9rem;
   outline: none;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   color-scheme: light;
 }
 
@@ -46,5 +143,25 @@ body {
 }
 
 .input-field:focus {
-  border-color: #5eead4;
+  border-color: #7cd4de;
+  box-shadow: 0 0 0 3px rgba(124, 212, 222, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

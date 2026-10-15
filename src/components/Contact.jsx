@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center reveal">
         <p className="text-gray-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Get in Touch
         </p>
@@ -30,26 +30,26 @@ export default function Contact() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-12 grid md:grid-cols-2 gap-6">
-        <div className="bg-bg-card border border-white/10 rounded-lg p-6 sm:p-8">
-          <h3 className="font-script text-2xl sm:text-3xl text-teal-accent mb-5">Contact Details</h3>
+        <div className="reveal card-lift bg-bg-card border border-white/10 rounded-lg p-6 sm:p-8 hover:border-accent/40">
+          <h3 className="font-script text-2xl sm:text-3xl text-accent mb-5">Contact Details</h3>
           <ul className="space-y-5">
             <ContactRow icon={MapPin} label="Address">
               <a
                 href={GOOGLE_MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-teal-accent transition-colors"
+                className="hover:text-accent transition-colors"
               >
                 {ADDRESS}
               </a>
             </ContactRow>
             <ContactRow icon={Phone} label="Phone">
-              <a href={PHONE_TEL} className="hover:text-teal-accent transition-colors">
+              <a href={PHONE_TEL} className="hover:text-accent transition-colors">
                 {PHONE_DISPLAY}
               </a>
             </ContactRow>
             <ContactRow icon={Mail} label="Email">
-              <a href={`mailto:${EMAIL}`} className="hover:text-teal-accent transition-colors">
+              <a href={`mailto:${EMAIL}`} className="hover:text-accent transition-colors">
                 {EMAIL}
               </a>
             </ContactRow>
@@ -58,7 +58,7 @@ export default function Contact() {
                 href={INSTAGRAM_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-teal-accent transition-colors"
+                className="hover:text-accent transition-colors"
               >
                 {INSTAGRAM_HANDLE}
               </a>
@@ -66,8 +66,8 @@ export default function Contact() {
           </ul>
         </div>
 
-        <div className="bg-bg-card border border-white/10 rounded-lg p-6 sm:p-8">
-          <h3 className="flex items-center gap-2 font-script text-2xl sm:text-3xl text-teal-accent mb-5">
+        <div className="reveal card-lift bg-bg-card border border-white/10 rounded-lg p-6 sm:p-8 hover:border-accent/40">
+          <h3 className="flex items-center gap-2 font-script text-2xl sm:text-3xl text-accent mb-5">
             <Clock size={20} />
             Business Hours
           </h3>
@@ -78,11 +78,11 @@ export default function Contact() {
                 <li
                   key={day}
                   className={`flex justify-between py-3 text-sm ${
-                    isToday ? 'bg-teal-accent/10 px-3 -mx-3 rounded' : ''
+                    isToday ? 'bg-accent/10 px-3 -mx-3 rounded' : ''
                   }`}
                 >
-                  <span className={isToday ? 'text-teal-accent font-semibold' : 'text-gray-300'}>
-                    {day} {isToday && <span className="text-teal-accent/70 font-normal">(Today)</span>}
+                  <span className={isToday ? 'text-accent font-semibold' : 'text-gray-300'}>
+                    {day} {isToday && <span className="text-accent/70 font-normal">(Today)</span>}
                   </span>
                   <span className={hours === 'Closed' ? 'text-red-400' : 'text-gray-300'}>{hours}</span>
                 </li>
@@ -111,7 +111,7 @@ export default function Contact() {
                 href={GOOGLE_MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-black bg-teal-accent px-5 py-2.5 rounded hover:bg-teal-300 transition-colors"
+                className="text-sm font-semibold btn-primary px-5 py-2.5 rounded"
               >
                 Get Directions
               </a>
@@ -119,7 +119,7 @@ export default function Contact() {
                 href={GOOGLE_MAPS_WRITE_REVIEW_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-white border border-white/20 px-5 py-2.5 rounded hover:border-teal-accent hover:text-teal-accent transition-colors"
+                className="text-sm font-semibold text-white border border-white/20 px-5 py-2.5 rounded hover:border-accent hover:text-accent transition-colors"
               >
                 Write a Review
               </a>
@@ -134,8 +134,8 @@ export default function Contact() {
 function ContactRow({ icon: Icon, label, children }) {
   return (
     <li className="flex items-start gap-4">
-      <span className="h-9 w-9 shrink-0 rounded-full bg-teal-accent/10 flex items-center justify-center">
-        <Icon size={16} className="text-teal-accent" />
+      <span className="h-9 w-9 shrink-0 rounded-full bg-accent/10 flex items-center justify-center">
+        <Icon size={16} className="text-accent" />
       </span>
       <span className="flex flex-col">
         <span className="text-gray-500 text-xs uppercase tracking-wide mb-0.5">{label}</span>

@@ -12,7 +12,7 @@ export default function Services() {
 
   return (
     <section id="services" className="px-4 sm:px-6 lg:px-8 py-20 bg-bg-panel/40">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-center reveal">
         <p className="text-gray-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           What We Offer
         </p>
@@ -37,8 +37,8 @@ export default function Services() {
               }}
               className={`flex items-center gap-2 px-6 py-4 rounded border text-sm font-medium uppercase tracking-wide transition-colors ${
                 active === id
-                  ? 'border-teal-accent text-teal-accent bg-teal-accent/5'
-                  : 'border-white/15 text-gray-200 hover:border-teal-accent/50 hover:text-teal-accent'
+                  ? 'border-accent text-accent bg-accent/5'
+                  : 'border-white/15 text-gray-200 hover:border-accent/50 hover:text-accent'
               }`}
             >
               <Icon size={18} />
@@ -50,14 +50,14 @@ export default function Services() {
         <div className="mt-10 min-h-[4rem]">
           {activeCategory ? (
             <div className="max-w-xl mx-auto bg-bg-card border border-white/10 rounded-lg p-6 text-left animate-fade-in">
-              <h3 className="text-teal-accent font-semibold uppercase tracking-wide text-sm mb-4">
+              <h3 className="text-accent font-semibold uppercase tracking-wide text-sm mb-4">
                 {activeCategory.label} Pricing
               </h3>
               <ul className="divide-y divide-white/10 max-h-[26rem] overflow-y-auto pr-1">
                 {activeCategory.items.map((item) => (
                   <li key={item.name} className="flex justify-between gap-4 py-2.5 text-gray-200">
                     <span>{item.name}</span>
-                    <span className="text-teal-accent font-medium whitespace-nowrap">{item.price}</span>
+                    <span className="text-accent font-medium whitespace-nowrap">{item.price}</span>
                   </li>
                 ))}
               </ul>

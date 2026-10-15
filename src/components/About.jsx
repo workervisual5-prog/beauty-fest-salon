@@ -27,7 +27,7 @@ const FEATURES = [
 export default function About() {
   return (
     <section id="about" className="px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center reveal">
         <p className="text-gray-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Get to Know Us
         </p>
@@ -39,14 +39,14 @@ export default function About() {
         <img
           src={aboutPhoto}
           alt="Makeup artist applying eyeshadow to a bride"
-          className="rounded-lg w-full h-auto object-cover shadow-xl"
+          className="reveal rounded-2xl w-full h-auto object-cover shadow-2xl shadow-accent-deep/20"
         />
 
-        <div>
-          <h3 className="font-script text-3xl sm:text-4xl text-teal-accent mb-1">
+        <div className="reveal" style={{ '--delay': '150ms' }}>
+          <h3 className="font-script text-3xl sm:text-4xl text-accent mb-1">
             Your Destination for Beauty &amp; Wellness
           </h3>
-          <div className="w-10 h-0.5 bg-teal-accent mb-5" />
+          <div className="w-10 h-0.5 bg-accent mb-5" />
 
           <p className="text-gray-300 leading-relaxed mb-4">
             Beauty Fest Salon &amp; Spa is your one-stop luxury beauty destination in Vaughan,
@@ -61,12 +61,13 @@ export default function About() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {FEATURES.map(({ icon: Icon, title, desc }) => (
+            {FEATURES.map(({ icon: Icon, title, desc }, i) => (
               <div
                 key={title}
-                className="bg-bg-card border border-white/10 rounded-lg p-5 text-left hover:border-teal-accent/40 transition-colors"
+                style={{ '--delay': `${300 + i * 100}ms` }}
+                className="reveal card-lift bg-bg-card border border-white/10 rounded-lg p-5 text-left hover:border-accent/40"
               >
-                <Icon size={22} className="text-teal-accent mb-3" />
+                <Icon size={22} className="text-accent mb-3" />
                 <h4 className="font-semibold text-white mb-1">{title}</h4>
                 <p className="text-gray-400 text-sm leading-snug">{desc}</p>
               </div>

@@ -3,11 +3,11 @@ import { PHONE_DISPLAY, PHONE_TEL } from '../data/siteConfig';
 
 export default function TopBar() {
   return (
-    <div className="bg-black text-xs sm:text-sm text-gray-300 text-center py-2 px-4">
+    <div className="bg-gradient-to-r from-accent-deep/30 via-black to-accent-deep/30 text-xs sm:text-sm text-gray-300 text-center py-2 px-4">
       <span className="inline-flex items-center gap-1.5 flex-wrap justify-center">
-        <Phone size={14} className="text-teal-accent" />
+        <Phone size={14} className="text-accent" />
         Call to book:{' '}
-        <a href={PHONE_TEL} className="font-semibold text-white hover:text-teal-accent transition-colors">
+        <a href={PHONE_TEL} className="font-semibold text-white hover:text-accent transition-colors">
           {PHONE_DISPLAY}
         </a>
         <span className="mx-1 text-gray-500">·</span>
